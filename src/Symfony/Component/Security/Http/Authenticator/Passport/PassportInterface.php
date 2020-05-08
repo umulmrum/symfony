@@ -33,10 +33,8 @@ interface PassportInterface
      * A passport can hold only one instance of the same security badge.
      * This method replaces the current badge if it is already set on this
      * passport.
-     *
-     * @return $this
      */
-    public function addBadge(BadgeInterface $badge): self;
+    public function addBadge(BadgeInterface $badge): void;
 
     public function hasBadge(string $badgeFqcn): bool;
 

@@ -26,11 +26,9 @@ trait PassportTrait
      */
     private $badges = [];
 
-    public function addBadge(BadgeInterface $badge): PassportInterface
+    public function addBadge(BadgeInterface $badge): void
     {
         $this->badges[\get_class($badge)] = $badge;
-
-        return $this;
     }
 
     public function hasBadge(string $badgeFqcn): bool
